@@ -1,0 +1,17 @@
+.search-btn{
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+  }
+  .search-btn:hover{
+  background-color: #fe424d;
+    color: #fff;
+  }
+ .search-btn i{
+    display: inline;
+    margin-right: 0.3rem;
+  }
+ .search-inp{
+  font-size: 1rem;
+    border-radius: 25px ;
+  }

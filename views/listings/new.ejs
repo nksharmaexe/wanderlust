@@ -1,0 +1,63 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+
+  <div class="row mt-2">
+    <div class="col-lg-8 offset-lg-2">
+      <h3>Create a new listing</h3>
+      <form action="/listings" class="needs-validation" novalidate method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="title" class="form-lable">Title</label>
+          <input required class="form-control" type="text" name="listing[title]" placeholder="Add a catchy title"
+            id="title" />
+          <div class="valid-feedback">Title looks good!</div>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-lable">Description</label>
+          <textarea required class="form-control" placeholder="Add a title" name="listing[description]"
+            id="description"></textarea>
+          <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-lable">Upload Listing Image</label>
+          <input type="file" class="form-control" name="listing[image]" id="image" required />
+        </div>
+        <div class="row">
+          <div class="mb-3 col-md-6">
+            <label for="category" class="form-lable">Select the Category</label>
+            <select required class="form-select form-control" name="listing[category]"
+              aria-label="Default select example">
+              <option selected value="rooms">Room</option>
+              <option value="iconic-cities">Iconic Cities</option>
+              <option value="mountains">Mountains</option>
+              <option selected value="castle">Castle</option>
+              <option value="camping">Camping</option>
+              <option value="farm">Farm</option>
+              <option value="arctic">Arctic</option>
+              <option value="desert">Desert</option>
+              <option value="domes">Dome</option>
+            </select>
+          </div>
+          <div class="mb-3 col-md-6">
+            <label for="price" class="form-lable">Price</label>
+            <input required min="0" type="number" placeholder="1200" class="form-control" name="listing[price]"
+              id="price" />
+            <div class="invalid-feedback">Price should be valid</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-md-8">
+            <label for="location" class="form-lable">Location</label>
+            <input required type="text" placeholder="Jaipur,Rajastha" class="form-control" name="listing[location]"
+              id="location" />
+            <div class="invalid-feedback">Location should be valid</div>
+          </div>
+          <div class="mb-3 col-md-4">
+            <label for="country" class="form-lable">Country</label>
+            <input required type="text" placeholder="India" class="form-control" name="listing[country]" id="country" />
+            <div class="invalid-feedback">Country name should be valid</div>
+          </div>
+        </div>
+
+        <button class="btn btn-dark mb-4 add-btn">Add</button>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222;
+}
+
+/* Footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials {
+  width: 100%;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.f-info {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  height: 8rem;
+  background-color: #ebebeb;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Cards */
+.card {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem;
+  width: 100%;
+  height: 20rem;
+
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: #fff;
+}
+
+/* New Page */
+.add-btn {
+  color: #fff;
+  border: none;
+  background-color: #fe424d;
+}
+
+/* Edit Page */
+.edit-btn {
+  color: #fff;
+  border: none;
+  background-color: #fe424d;
+}
+
+.edit-btn:hover {
+  background-color: #fe424d;
+}
+
+.add-btn:hover {
+  background-color: #fe424d;
+}
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.bls {
+  border: 2px solid #908f8f;
+}
+
+.bls:hover {
+  border: 2px solid #908f8f;
+}
+
+/* Map */
+#map {
+  height: 60vh;
+  width: 45vw;
+}
+
+/* Review */
+.review-box {
+  border: 1px solid #a6a5a5;
+  margin: 0;
+  padding: .2rem .5rem;
+}
+
+.review-user {
+  border-bottom: .5px solid #a6a5a5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-user i {
+  font-size: 1.3rem;
+}
+
+.review-user button {
+  border: none;
+  background-color: #fff;
+}
+.show-pass{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (width <=40rem) {
+  .card-img-top {
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+    height: 9rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #map {
+    height: 30vh;
+    width: 100%;
+  }
+
+  .edit-btn {
+    width: 5rem;
+  }
+}

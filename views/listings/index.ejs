@@ -1,0 +1,105 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+
+    <div class="container mt-2">
+        <div id="filters">
+            <div class="filter-list">
+                <div class="filter">
+                    <a href="/listings">
+                    <div><i class="fa-solid fa-fire"></i>
+                        <p>Trending</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/rooms">
+                    <div><i class="fa-solid fa-bed"></i>
+                        <p>Rooms</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/iconic-cities">
+                    <div><i class="fa-solid fa-mountain-city"></i>
+                        <p>Iconic Cities</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/mountains">
+                    <div><i class="fa-solid fa-mountain"></i>
+                        <p>Mountains</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/castle">
+                    <div><i class="fa-brands fa-fort-awesome"></i>
+                        <p>Castle</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/camping">
+                    <div><i class="fa-solid fa-campground"></i>
+                        <p>Camping</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/farm">
+                    <div><i class="fa-solid fa-cow"></i>
+                        <p>Farm</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/arctic">
+                    <div><i class="fa-solid fa-snowflake"></i>
+                        <p>Arctic</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/desert">
+                    <div><img src="/img/desert.png" alt="" srcset="">
+                        <p>Deserts</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <a href="/listings/filters/domes">
+                    <div><i class="fa-solid fa-igloo"></i>
+                        <p>Domes</p>
+                    </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="tax-toggle">
+                <div class="form-check-reverse form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                    <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-2  mt-2 ">
+            <% for(let listing of allListings){ %>
+                <a href="/listings/<%= listing._id %>" class="listing-link">
+                    <div class="card col">
+                        <img src="<%= listing.image.url %>" class="card-img-top" alt="...">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    <%= listing.title %>
+                                </b> <br>
+                                <%= listing.price ? `₹${listing.price.toLocaleString("en-IN")}/night`
+                                    : "Price not available" %>
+                                    <i class="tax-info"> &nbsp;&nbsp;+18% GST</i>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <%}%>
+        </div>
+    </div>
