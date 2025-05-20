@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const initData = require("./updated_data.js");
 const Listing = require("../models/listing.js");
 
-const dbUrl = "mongodb+srv://wanderlust:IJF5IUs0CPRgQHQZ@cluster0.hcvgxxy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const dbUrl =process.env.ATLASDB_URL;
 
 const initDB = async () => {
   try {
