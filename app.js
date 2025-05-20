@@ -66,6 +66,7 @@ app.use((req, res, next) => {
   next();
 });
 
+
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
@@ -81,8 +82,9 @@ main()
     console.log(err);
   });
 
-// Filters
-
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
