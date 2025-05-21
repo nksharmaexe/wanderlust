@@ -61,8 +61,7 @@ module.exports.forgot = async (req, res) => {
     user.resetTokenExpiry = Date.now() + 3600000; // 1 hour
     await user.save();
 
-    const resetLink = `http://localhost:8080/reset-password/${token}`;
-
+const resetUrl = `${process.env.BASE_URL}/reset-password/${token}`;
     // Send email
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
