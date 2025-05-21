@@ -77,7 +77,7 @@ const resetUrl = `${process.env.BASE_URL}/reset-password/${token}`;
       to: user.email,
       subject: "Password Reset",
       html: `<p>You requested a password reset</p>
-           <p><a href="${resetLink}">Click here</a> to reset password</p>`,
+           <p><a href="${resetUrl}">Click here</a> to reset password</p>`,
     });
     req.flash("success", "Password reset email sent.✅");
     res.redirect("/login");
