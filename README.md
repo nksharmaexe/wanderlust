@@ -34,7 +34,7 @@ A full-stack travel listing web application where users can explore, create, and
 ---
 
 ## 🧱 Project Structure
-
+```bash
 wanderlust/
 ├── controllers/ # Route logic
 ├── models/ # Mongoose schemas (User, Listing)
@@ -46,7 +46,7 @@ wanderlust/
 ├── app.js # App entry point
 ├── .env # Environment variables
 ├── package.json
-
+```
 ---
 
 ## ⚙️ Setup Instructions
