@@ -61,4 +61,3 @@ node app.js
 ```
 ---
 👨‍💻 Author - Nitesh Kumar
-Check out more of my projects on my GitHub
