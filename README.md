@@ -60,6 +60,5 @@ npm install
 node app.js
 ```
 ---
-👨‍💻 Author
-Developed with ❤️ by Nitesh Kumar
+👨‍💻 Author - Nitesh Kumar
 Check out more of my projects on my GitHub
